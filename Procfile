@@ -1,1 +1,1 @@
-web: node projec.js
+web: node project.js
