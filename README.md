@@ -1,3 +1,6 @@
 # NodeEjsExpress
 
-Start with npm start or nodemon project.js
+Practiced EJS files and Express Backend with local JSOn file and external APIs.
+
+deployed into Heroku.
+https://project2005542.herokuapp.com/
