@@ -9,7 +9,6 @@ let ejs = require('ejs');
 var axios = require("axios");
 const createApplication = require("express/lib/express");
 
-app.set('port', (process.env.PORT || 5000));
 
 //apikey for weather
 const apiKey = '81e9c5816d90d63c82e0876fca5c273c';
@@ -98,11 +97,12 @@ app.get("*", function(req,res){
   res.status(404).send("Sivua ei löydy! Palaa takaisin <a href = '/'>tästä.</a>");
 });
 
-app.listen(app.get('port'), function() {
-  console.log("Node app running at localhost:" + app.get('port'));
-});
+app.listen(process.env.PORT || 3000, function() {
+  console.log('Server listening on port 3000');
+  
+  });
 
-module.exports = app
+
 
 //web server creation with Express
 /*const PORT = process.env.PORT || 3000;
