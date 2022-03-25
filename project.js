@@ -93,15 +93,19 @@ response.render("pages/local", data);
 
 //If not correct page writed then it gives warning 
 app.get("*", function(req,res){
-  res.status(404).send("Sivua ei löydy!");
+  res.status(404).send("Sivua ei löydy! Palaa takaisin <a href = '/'>tästä.</a>");
 });
-
-
-
 
 //web server creation with Express
 const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`This app is listening port number ${ PORT }`);
+});
+
+//web server creation with Express
+/*const PORT = process.env.PORT || 3000;
 app.listen(PORT, function(){
     console.log("This app is listening port number %d", PORT);
-});
+});*/
+
 
