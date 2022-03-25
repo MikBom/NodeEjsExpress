@@ -97,10 +97,13 @@ app.get("*", function(req,res){
 });
 
 //web server creation with Express
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`This app is listening port number ${ PORT }`);
+const PORT = process.env.PORT || 80;
+var server = app.listen(PORT, function() {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log("server is listening at http://%s:%s", host, port);
 });
+
 
 //web server creation with Express
 /*const PORT = process.env.PORT || 3000;
